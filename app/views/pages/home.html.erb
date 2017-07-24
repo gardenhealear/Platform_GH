@@ -1,0 +1,14 @@
+
+<% if @current_user %>
+  <% if @current_user.role == "admin" %>
+    <h1>Bienvenue admin <%= @current_user.lastname %> sur GardenHealer!!</h1>
+  <% else %>
+    <h1>Bienvenue <%= @current_user.lastname %> sur GardenHealer!!</h1>
+  <% end %>
+  <%= form_tag "/users/login", method: :delete do %>
+  <input type="submit" value="Deconnexion" />
+  <% end %>
+<% else %>
+  <a href="/users">Inscription</a>
+  <a href="/users/login">Connexion</a>
+<% end %>

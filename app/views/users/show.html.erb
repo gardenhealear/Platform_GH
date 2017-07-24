@@ -1,0 +1,10 @@
+<h1>Liste des utilisateurs</h1>
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.id %></li>
+    <li><%= user.firstname %></li>
+    <li><%= user.lastname %></li>
+    <li><%= user.email %></li>
+  <% end %>
+</ul>
+<a href="/pages/home">Retourner a l'acceuil</a>

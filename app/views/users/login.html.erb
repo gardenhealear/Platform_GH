@@ -1,0 +1,10 @@
+<h1>Connexion<h1>
+<a href="/pages/home">Retourner a l'acceuil</a>
+
+<%= form_tag "/users/login", method: :post do %>
+  <input type="text" name="lastname" placeholder="Nom" />
+  </br>
+  <input type="text" name="mdp" placeholder="Mot de passe" />
+  </br>
+  <input type="submit" value="Connexion" />
+<% end %>
